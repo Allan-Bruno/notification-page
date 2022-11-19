@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  font-family: "poppins", sans-serif;
+  font-size: 12px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  margin-bottom: 0rem;
+  width: 90vw;
+  max-width: 740px;
+  box-shadow: 1px 1px 15px gray;
+  border-radius: 10px;
+}
+
+main {
+  height: 100vh;
+}
+
+#separator {
+  width: 60%;
+}
+
+#spacer {
+  width: 1%;
+}
+
+#counter {
+  display: flex;
+  background-color: #fe5f55;
+  padding: 0px 5px;
+  height: 20px;
+  border-radius: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+#referrer {
+  font-weight: 700;
+  font-size: 21px;
+}
+
+#mAaR {
+  background-color: darkblue;
+  padding: 5px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#topBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  width: 100%;
+  background-color: #1d4e89;
+  padding: 0.4rem;
+  border: 2px #1d4e89 solid;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.highlight {
+  color: #334195;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.profile-image {
+  width: 30px;
+  border: 2px #a6b1e1 solid;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#notifications {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+}
+
+.notification {
+  border-bottom: 1px #e6eed6 solid;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.notification:hover {
+  background-color: #dac4f7;
+  transition: 0.2s ease-in-out;
+}
+
+#contribution {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.info {
+  align-items: center;
+  gap: 5px;
+  display: flex;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.date {
+  font-size: 12px;
+  color: #638475;
+}
+
+#msgText {
+  display: flex;
+  border: 1px #ebebbe solid;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #ebebeb;
+  margin: 0 15px 0 15px;
+  padding: 0.7rem;
+}
