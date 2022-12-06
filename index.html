@@ -24,113 +24,141 @@
       <div class="container">
         <div id="topBar">
           <div id="referrer">Notifications</div>
-          <div id="spacer"></div>
-          <div id="counter">3</div>
+          <div id="counter">7</div>
           <div id="separator"></div>
-          <div id="mAaR">Mark all as read</div>
+          <button onclick="markAllAsRead()" id="mAaR">Mark all as read</button>
         </div>
         <div id="notifications">
-          <div class="notification">
-            <div class="info">
-              <img
-                src="/assets/images/avatar-mark-webber.webp"
-                alt="Max Webber's profile image"
-                class="profile-image"
-              />
-              Mark Webber reacted to your recent post
-              <span class="highlight">My first tournament today!</span>
-            </div>
-            <div class="date">1m ago</div>
-          </div>
-          <div class="notification">
-            <div class="info">
-              <img
-                src="/assets/images/avatar-angela-gray.webp"
-                alt="Angela Gray's profile image"
-                class="profile-image"
-              />
-              Angela Gray followed you
-            </div>
-            <div class="date">5m ago</div>
-          </div>
-          <div class="notification">
-            <div class="info">
-              <img
-                src="/assets/images/avatar-jacob-thompson.webp"
-                alt="Jacob Thompson's profile image"
-                class="profile-image"
-              />
-              Jacob Thompson has joined your group
-              <span class="highlight">Chess Club</span>
-            </div>
-            <div class="date">1 day ago</div>
-          </div>
-          <div class="notification" id="message">
-            <div class="info">
-              <img
-                src="/assets/images/avatar-rizky-hasanuddin.webp"
-                alt="Rizky Hassanuddin's profile image"
-                class="profile-image"
-              />
-              Rizky Hasanuddin sent you a private message
-            </div>
-            <div class="date">5 days ago</div>
-
+          <div id="mark" class="notification new">
             <div>
-              <small id="msgText">
-                Hello, thanks for setting up the Chess Club. I've been a member
-                for a few weeks now and I'm already having lots of fun and
-                improving my game.
-              </small>
+              <div class="info">
+                <img
+                  src="/assets/images/avatar-mark-webber.webp"
+                  alt="Max Webber's profile image"
+                  class="profile-image"
+                />
+                <p>
+                  Mark Webber reacted to your recent post
+                  <span class="highlight">My first tournament today!</span>
+                </p>
+              </div>
+              <div class="date">1m ago</div>
             </div>
+            <button onclick="subtract()" class="markAsRead"></button>
           </div>
-          <div class="notification">
-            <div class="info">
-              <img
-                src="/assets/images/avatar-kimberly-smith.webp"
-                alt="Kimberly Smith's profile image"
-                class="profile-image"
-              />
-              Kimberly Smith commented on your picture
+          <div id="angela" class="notification new">
+            <div>
+              <div class="info">
+                <img
+                  src="/assets/images/avatar-angela-gray.webp"
+                  alt="Angela Gray's profile image"
+                  class="profile-image"
+                />
+                Angela Gray followed you
+              </div>
+              <div class="date">5m ago</div>
             </div>
-            <div class="date">1 week ago</div>
+            <button onclick="subtract()" class="markAsRead"></button>
           </div>
-          <div class="notification">
-            <div class="info">
-              <img
-                src="/assets/images/avatar-nathan-peterson.webp"
-                alt="Nathan Peterson's profile image"
-                class="profile-image"
-              />
-              Nathan Peterson reacted to your recent post
-              <span class="highlight"
-                >5 end-game strategies to increase your win rate</span
-              >
+          <div id="jacob" class="notification new">
+            <div>
+              <div class="info">
+                <img
+                  src="/assets/images/avatar-jacob-thompson.webp"
+                  alt="Jacob Thompson's profile image"
+                  class="profile-image"
+                />
+                <p>
+                  Jacob Thompson has joined your group
+                  <span class="highlight">Chess Club</span>
+                </p>
+              </div>
+              <div class="date">1 day ago</div>
             </div>
-            <div class="date">2 weeks ago</div>
+            <button onclick="subtract()" class="markAsRead"></button>
           </div>
-          <div class="notification">
-            <div class="info">
-              <img
-                src="/assets/images/avatar-anna-kim.webp"
-                alt="Anna Kim's profile image"
-                class="profile-image"
-              />
-              Anna Kim left the group <span class="highlight">Chess Club</span>
+          <div class="notification new" id="rizky">
+            <div>
+              <div class="info">
+                <img
+                  src="/assets/images/avatar-rizky-hasanuddin.webp"
+                  alt="Rizky Hassanuddin's profile image"
+                  class="profile-image"
+                />
+                Rizky Hasanuddin sent you a private message
+              </div>
+              <div class="date">5 days ago</div>
+
+              <div>
+                <small id="msgText">
+                  Hello, thanks for setting up the Chess Club. I've been a
+                  member for a few weeks now and I'm already having lots of fun
+                  and improving my game.
+                </small>
+              </div>
             </div>
-            <div class="date">2 weeks ago</div>
+            <button onclick="subtract()" class="markAsRead"></button>
           </div>
-          <small class="attribution">
-            Challenge by
-            <a
-              href="https://www.frontendmentor.io?ref=challenge"
-              target="_blank"
-              >Frontend Mentor</a
-            >. Coded by
-            <a href="https://www.github.io/Allan-Bruno">Allan Bruno</a>.
-          </small>
+          <div id="Kimberly" class="notification new">
+            <div>
+              <div class="info">
+                <img
+                  src="/assets/images/avatar-kimberly-smith.webp"
+                  alt="Kimberly Smith's profile image"
+                  class="profile-image"
+                />
+                Kimberly Smith commented on your picture
+              </div>
+              <div class="date">1 week ago</div>
+            </div>
+            <button onclick="subtract()" class="markAsRead"></button>
+          </div>
+          <div id="Nathan" class="notification new">
+            <div>
+              <div class="info">
+                <img
+                  src="/assets/images/avatar-nathan-peterson.webp"
+                  alt="Nathan Peterson's profile image"
+                  class="profile-image"
+                />
+                <p>
+                  Nathan Peterson reacted to your recent post
+                  <span class="highlight"
+                    >5 end-game strategies to increase your win rate</span
+                  >
+                </p>
+              </div>
+              <div class="date">2 weeks ago</div>
+            </div>
+            <button onclick="subtract()" class="markAsRead"></button>
+          </div>
+          <div id="Anna" class="notification new">
+            <div>
+              <div class="info">
+                <img
+                  src="/assets/images/avatar-anna-kim.webp"
+                  alt="Anna Kim's profile image"
+                  class="profile-image"
+                />
+                <p>
+                  Anna Kim left the group
+                  <span class="highlight">Chess Club</span>
+                </p>
+              </div>
+              <div class="date">2 weeks ago</div>
+            </div>
+            <button onclick="subtract()" class="markAsRead"></button>
+          </div>
         </div>
+        <small class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://www.github.io/Allan-Bruno">Allan Bruno</a>.
+        </small>
       </div>
     </main>
+    <script src="/index.js"></script>
   </body>
 </html>

@@ -34,7 +34,7 @@ main {
 
 #counter {
   display: flex;
-  background-color: #fe5f55;
+  background-color: #f7786f;
   padding: 0px 5px;
   height: 20px;
   border-radius: 2px;
@@ -44,14 +44,17 @@ main {
 
 #referrer {
   font-weight: 700;
-  font-size: 21px;
+  font-size: 1.5vw;
 }
 
 #mAaR {
   background-color: darkblue;
   padding: 5px 5px;
+  border: none;
   border-radius: 10px;
   cursor: pointer;
+  color: white;
+  font-weight: bolder;
 }
 
 #topBar {
@@ -62,7 +65,7 @@ main {
   width: 100%;
   background-color: #1d4e89;
   padding: 0.4rem;
-  border: 2px #1d4e89 solid;
+  justify-content: space-between;
   border-bottom: none;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -85,23 +88,23 @@ main {
   display: flex;
   flex-direction: column;
   align-items: left;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   width: 100%;
 }
 
 .notification {
-  border-bottom: 1px #e6eed6 solid;
-  align-items: center;
+  border-bottom: 1px darkgray solid;
+  background-color: #a7b1a6;
   gap: 0.5rem;
+  font-size: 10px;
   padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .notification:hover {
-  background-color: #dac4f7;
+  background-color: #a7b1a6;
   transition: 0.2s ease-in-out;
 }
 
@@ -133,10 +136,136 @@ main {
 
 #msgText {
   display: flex;
-  border: 1px #ebebbe solid;
   padding: 5px;
   border-radius: 10px;
-  background-color: #ebebeb;
+  background-color: #c0d5e0;
   margin: 0 15px 0 15px;
   padding: 0.7rem;
+  max-width: 500px;
+}
+
+.new {
+  background-color: white;
+  border-bottom: 1px #fafafa solid;
+}
+
+.new:hover {
+  background-color: #dac4f7;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.markAsRead::before {
+  content: url(/assets/images/eye-idle.svg);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.markAsRead:hover::before {
+  content: url(/assets/images/eye-hover.svg);
+  box-shadow: 0px 0px 6px grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.markAsRead[disabled]:hover {
+  box-shadow: none;
+  content: url(/assets/images/eye-idle.svg);
+}
+
+.markAsRead {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  overflow-x: hidden;
+}
+
+@media (max-width: 320px) and (max-width: 375px) {
+  * {
+    overflow-y: scroll;
+  }
+
+  .date {
+    font-size: 8px;
+  }
+
+  .info,
+  p,
+  span {
+    font-size: 10px;
+    width: 100%;
+    max-height: none;
+  }
+
+  .profile-image !important {
+    width: 30px;
+    height: 30px;
+  }
+
+  #referrer {
+    font-size: 4vw;
+  }
+
+  #separator {
+    width: 60px;
+  }
+
+  .markAsRead {
+    min-width: 30px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+  #referrer {
+    font-size: 3vw;
+  }
+
+  #separator {
+    width: 30vw;
+  }
+
+  .info,
+  p,
+  span {
+    font-size: 10px;
+    width: 100%;
+    max-height: none;
+  }
+  .date {
+    font-size: 8px;
+  }
+
+  .profile-image !important {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  #referrer {
+    font-size: 4vw;
+  }
+  #separator {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #separator {
+    width: 45vw;
+  }
 }
