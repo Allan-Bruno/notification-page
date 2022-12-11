@@ -20,16 +20,14 @@
   border-radius: 10px;
 }
 
+#essentials {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+}
+
 main {
   height: 100vh;
-}
-
-#separator {
-  width: 60%;
-}
-
-#spacer {
-  width: 1%;
 }
 
 #counter {
@@ -92,8 +90,8 @@ main {
 }
 
 .notification {
-  border-bottom: 1px darkgray solid;
-  background-color: #a7b1a6;
+  border-bottom: 1px #fafafa solid;
+  background-color: white;
   gap: 0.5rem;
   font-size: 10px;
   padding: 0.5rem;
@@ -104,7 +102,7 @@ main {
 }
 
 .notification:hover {
-  background-color: #a7b1a6;
+  background-color: #ececec;
   transition: 0.2s ease-in-out;
 }
 
@@ -145,12 +143,12 @@ main {
 }
 
 .new {
-  background-color: white;
-  border-bottom: 1px #fafafa solid;
+  background-color: #acdde7;
+  border-bottom: 1px #9ac9d3 solid;
 }
 
 .new:hover {
-  background-color: #dac4f7;
+  background-color: #acdde7;
 }
 
 .button {
@@ -211,17 +209,13 @@ main {
     max-height: none;
   }
 
-  .profile-image !important {
-    width: 30px;
-    height: 30px;
+  .profile-image {
+    width: 30px !important;
+    height: 30px !important;
   }
 
   #referrer {
     font-size: 4vw;
-  }
-
-  #separator {
-    width: 60px;
   }
 
   .markAsRead {
@@ -232,10 +226,6 @@ main {
 @media (min-width: 375px) and (max-width: 425px) {
   #referrer {
     font-size: 3vw;
-  }
-
-  #separator {
-    width: 30vw;
   }
 
   .info,
@@ -249,9 +239,9 @@ main {
     font-size: 8px;
   }
 
-  .profile-image !important {
-    width: 30px;
-    height: 30px;
+  .profile-image {
+    width: 30px !important;
+    height: 30px !important;
   }
 }
 
@@ -259,13 +249,50 @@ main {
   #referrer {
     font-size: 4vw;
   }
-  #separator {
-    width: 30vw;
-  }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  #separator {
-    width: 45vw;
+@media (min-width: 2560px) and (max-width: 2560px) {
+  * {
+    font-size: 30px;
+  }
+
+  .date {
+    font-size: 25px;
+  }
+
+  .profile-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 40px;
+  }
+
+  #counter {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .markAsRead {
+    width: 80px;
+  }
+
+  #msgText {
+    max-width: 80%;
+  }
+
+  .container {
+    max-width: 90vw;
+  }
+
+  #referrer {
+    font-size: 2em;
+  }
+
+  #mAaR {
+    padding: 20px;
+  }
+
+  .attribution {
+    font-size: 1em;
   }
 }

@@ -7,19 +7,17 @@ let subtract = () => {
 
   let e = event.target;
 
+  e.parentElement.classList.remove("new");
+
   if (newValue < 0) {
     newValue = 0;
   }
-
-  console.log(e.parentElement);
-
-  e.parentElement.classList.remove("new");
 
   counter.innerText = newValue;
 
   notifications.addEventListener("click", () => {
     if ((e.tagName = "BUTTON")) {
-      e.setAttribute("disabled", "");
+      e.remove(e);
     }
   });
 };
@@ -35,13 +33,15 @@ let markAllAsRead = () => {
     newValue = 0;
   }
 
+  console.log(buttons);
+
   counter.innerText = newValue;
 
   for (let i = 0; i < notifications.length; i++) {
     notifications[i].classList.remove("new");
   }
 
-  for (let i = 0; i < notifications.length; i = i + 1) {
-    buttons[i].setAttribute("disabled", "disabled");
+  for (let i = buttons.length - 1; i >= 0; --i) {
+    buttons[i].remove();
   }
 };
