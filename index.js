@@ -1,11 +1,11 @@
-let subtract = () => {
-  let notifications = document.getElementById("notifications");
+const subtract = () => {
+  const notifications = document.getElementById("notifications");
 
-  let counter = document.getElementById("counter");
+  const counter = document.getElementById("counter");
 
-  let newValue = Number(counter.innerText) - 1;
+  const newValue = Number(counter.innerText) - 1;
 
-  let e = event.target;
+  const e = event.target;
 
   e.parentElement.classList.remove("new");
 
@@ -22,18 +22,16 @@ let subtract = () => {
   });
 };
 
-let markAllAsRead = () => {
-  let buttons = document.getElementsByClassName("markAsRead");
+const markAllAsRead = () => {
+  const buttons = document.getElementsByClassName("markAsRead");
 
-  let notifications = document.getElementsByClassName("notification");
+  const notifications = document.getElementsByClassName("notification");
 
-  let newValue = Number(counter.innerText) - 7;
+  const newValue = Number(counter.innerText) - 7;
 
   if (newValue < 0) {
     newValue = 0;
   }
-
-  console.log(buttons);
 
   counter.innerText = newValue;
 
