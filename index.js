@@ -27,7 +27,7 @@ const markAllAsRead = () => {
 
   const notifications = document.getElementsByClassName("notification");
 
-  const newValue = Number(counter.innerText) - 7;
+  let newValue = Number(counter.innerText) - 7;
 
   if (newValue < 0) {
     newValue = 0;
